@@ -16,14 +16,17 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "Car Loan calculated",
             Toast.LENGTH_SHORT).show()
 
-        var carprice =  car_price.text.toString().toInt()
-        var downpay = down_payment.text.toString().toInt()
+        var carprice =  car_price.text.toString().toDouble()
+        var downpay = down_payment.text.toString().toDouble()
         var interestrate = interest_rate.text.toString().toInt()
-        var loanyear = loan_year.text.toString().toInt()
+        var loanyear = loan_year.text.toString().toDouble()
 
-        val carloan = carprice - downpay
-        val interest = carloan * interestrate * loanyear
-        val monthpay = (carloan + interest)/ loanyear/12
+        val carloan1 = carprice - downpay
+        val interest1 = carloan1 * interestrate * loanyear
+        val monthpay1 = (carloan1 + interest1)/ loanyear/12
+        val carloan:Double = String.format("%.2f",carloan1).toDouble()
+        val interest:Double = String.format("%.2f",interest1).toDouble()
+        val monthpay:Double = String.format("%.2f",monthpay1).toDouble()
 
         car_loan.setText("Car loan = "+carloan)
         Interest.setText("Interest = "+interest)
