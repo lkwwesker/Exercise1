@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         var carprice =  car_price.text.toString().toDouble()
         var downpay = down_payment.text.toString().toDouble()
-        var interestrate = interest_rate.text.toString().toInt()
-        var loanyear = loan_year.text.toString().toDouble()
+        var interestrate = interest_rate.text.toString().toDouble()
+        var loanyear = loan_year.text.toString().toInt()
 
         val carloan1 = carprice - downpay
         val interest1 = carloan1 * interestrate * loanyear
